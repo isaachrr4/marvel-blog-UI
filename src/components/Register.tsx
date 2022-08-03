@@ -27,7 +27,10 @@ function Register(props: IRegisterProps) {
     }
 
     let register = async (e: SyntheticEvent) => {
-        
+       if(!username || !password) {
+        if (!username) setErrmsg('You must enter a valid username.');
+        else setErrmsg("You must enter a vaild passowrd.");
+       } 
     }
 
 
