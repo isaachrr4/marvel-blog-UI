@@ -4,6 +4,7 @@ import Login from './components/Login';
 import { User } from './models/user';
 import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navbar';
+import Register from './components/Register';
 import './App.css';
 
 const [authUser, setAuthUser] = useState<User>();
@@ -20,7 +21,7 @@ function App() {
 
     <Routes>
     <Route path="/" element={<Login currentUser={authUser} setCurrentUser={setAuthUser}/>}/>
-
+    <Route path="/register" element={<Register/>}/>
     </Routes>
     </div>
   );
