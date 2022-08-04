@@ -29,3 +29,10 @@ function ComicSearch() {
 
     const theme = createTheme();
 }
+
+
+
+
+
+
+export default ComicSearch;
