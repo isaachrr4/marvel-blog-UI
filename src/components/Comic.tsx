@@ -28,6 +28,83 @@ function ComicSearch() {
     console.log('SEARCH', search)
 
     const theme = createTheme();
+
+    if(comicData.length == 0) {
+        return (
+            <div>
+                <h1> One moment...</h1>
+            </div>
+        )
+    }     else {
+        return (
+            <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <main>
+                    <Box
+                        sx={{
+                            bgcolor: 'background.paper',
+                            pt: 8,
+                            pb: 6,
+                        }}
+                    >
+                        <Container maxWidth="sm">
+                            <Typography
+                                component="h1"
+                                variant="h2"
+                                align="center"
+                                color="text.primary"
+                                gutterBottom
+                            >
+                                Character layout
+                            </Typography>
+        
+                            <input
+                                type="search"
+                                onChange={(event: SyntheticEvent) => {
+                                    setSearch((event.target as HTMLInputElement).value)
+                                }}
+                                placeholder="Filter"
+                            />
+                        </Container>
+                    </Box>
+                    <Container sx={{py: 2}} maxWidth="lg">
+                        <Grid container spacing={4}>
+                            {comicData.filter((val) => {
+                                if (search === "") {
+                                    return val;
+                                } else if (val.name.toLowerCase().includes(search.toLowerCase())) {
+                                    return val;
+                                }
+                            }).map((com, idx) => (
+                                <Grid item key={idx} xs={12} sm={6} md={3}>
+                                    <Card
+                                        sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}
+                                    >
+                                        <CardMedia
+                                            component="img"
+                                            sx={{
+                                                pt: '10.25%',
+                                            }}
+                                            image={com.images.small}
+                                            alt={com.name}
+                                        />
+                                        <CardContent sx={{ flexGrow: 1}}>
+                                            <Typography gutterBottom variant="h5" component="h2">
+                                                {com.name}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Button size="small">Add</Button>
+                                        </CardActions>    
+                                    </Card>
+                                </Grid>
+                            ))}
+                        </Grid>
+                    </Container>
+                </main>
+            </ThemeProvider>
+        )
+    }
 }
 
 
