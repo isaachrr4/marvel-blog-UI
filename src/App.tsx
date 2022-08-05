@@ -23,7 +23,7 @@ function App() {
     <Routes>
     <Route path="/" element={<Login currentUser={authUser} setCurrentUser={setAuthUser}/>}/>
     <Route path="/register" element={<Register/>}/>
-    
+    <Route path="/search" element={<ComicSearch/>}/>
     </Routes>
     </div>
   );
