@@ -40,7 +40,7 @@ function Navbar(props: INavbarProps) {
                                     props.currentUser.userAuthRole === 1
                                     ?
                                     <ListItemText inset>
-                                        <Typography variant="h6" color="inherit" onClick={() => {navigate("/allUsers")}}>All Users</Typography>
+                                        <Typography variant="h6" color="inherit" onClick={() => {navigate("/search")}}>Search</Typography>
                                     </ListItemText>
                                     :
                                     <>
