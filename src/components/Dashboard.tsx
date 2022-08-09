@@ -15,7 +15,7 @@ function Dashboard (props: IDashboard) {
     return (
         <>
             <h1>
-                Welcome to your MArvel Finder Dashboard!</h1>
+                Welcome to your Marvel Finder Dashboard!</h1>
 
             
         </>
