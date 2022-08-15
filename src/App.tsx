@@ -6,15 +6,19 @@ import { Route, Routes } from 'react-router-dom';
 import Navigation from './components/Navbar';
 import Register from './components/Register';
 import ComicSearch from './components/Comic';
+import { UserData } from './models/userdata';
 import './App.css';
 
-const [authUser, setAuthUser] = useState<User>();
-
-useEffect(() => {
-
-})
 
 function App() {
+
+  const [authUser, setAuthUser] = useState<User>();
+  const [userData, setUserData] = useState<UserData[]>([]);
+
+useEffect(() => {
+ 
+})
+
   return (
     <div className="App">
      
