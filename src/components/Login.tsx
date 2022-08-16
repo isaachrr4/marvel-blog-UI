@@ -6,7 +6,7 @@ import { User } from "../models/user";
 interface ILoginProps {
     currentUser: User | undefined, // union types (this or that)
     setCurrentUser: (nextUser: User) => void
-}
+} 
 
 function Login(props: ILoginProps) {
 
