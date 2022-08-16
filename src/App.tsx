@@ -7,6 +7,7 @@ import Navigation from './components/Navbar';
 import Register from './components/Register';
 import ComicSearch from './components/Comic';
 import { UserData } from './models/userdata';
+import { FavoriteComics } from './models/favoritecomics';
 import './App.css';
 
 
@@ -28,6 +29,7 @@ useEffect(() => {
     <Route path="/" element={<Login currentUser={authUser} setCurrentUser={setAuthUser}/>}/>
     <Route path="/register" element={<Register/>}/>
     <Route path="/search" element={<ComicSearch/>}/>
+    <Route path="/favorites" element={<>FavoriteComics</>}/>
     </Routes>
     </div>
   );
