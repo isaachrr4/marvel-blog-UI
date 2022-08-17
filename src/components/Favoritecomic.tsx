@@ -10,6 +10,13 @@ interface IFavoriteComicProps {
 function FavoriteComics(props: IFavoriteComicProps) {
     
 
+    return(
+        <>
+
+        </>
+    )
+    
+
 }
 
 
