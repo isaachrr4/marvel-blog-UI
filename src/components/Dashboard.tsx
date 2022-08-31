@@ -1,9 +1,7 @@
-import { SyntheticEvent, useState } from "react";
 import { User } from "../models/user";
 import { useNavigate} from "react-router-dom";
 import { Grid } from '@mui/material';
 import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 
 

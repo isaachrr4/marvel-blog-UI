@@ -29,7 +29,7 @@ function ComicSearch() {
 
     const theme = createTheme();
 
-    if(comicData.length == 0) {
+    if(comicData.length === 0) {
         return (
             <div>
                 <h1> One moment...</h1>

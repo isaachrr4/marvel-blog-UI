@@ -1,6 +1,5 @@
 import { SyntheticEvent, useState } from "react";
 import { useNavigate} from "react-router-dom";
-import { getTokenSourceMapRange } from "typescript";
 import { User } from "../models/user";
 
 interface ILoginProps {
@@ -42,7 +41,7 @@ function Login(props: ILoginProps) {
                 body: JSON.stringify({username, password})
             });
 
-            if (resp.status != 200) {
+            if (resp.status !== 200) {
                 setErr("Invalid username and password");
             } else {
                 console.log(`User ${username} logged in!`);
